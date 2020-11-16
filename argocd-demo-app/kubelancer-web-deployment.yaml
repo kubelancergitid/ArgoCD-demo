@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: web-world-app
-        image: kubelancer/web:v1
+        image: kubelancer/web:v2
         ports:
         - containerPort: 80
