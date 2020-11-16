@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-world-deployment
+  labels:
+    app: web-world-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-world-app
+  template:
+    metadata:
+      labels:
+        app: web-world-app
+    spec:
+      containers:
+      - name: web-world-app
+        image: kubelancer/web:v1
+        ports:
+        - containerPort: 80
